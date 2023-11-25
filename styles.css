@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "asap-regular";
+  src: url(./assets/AsapCondensed-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: asap-regular, sans-serif;
+}
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url(./assets/hero-fondo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#hero > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#hero .col-1 img {
+  width: 70%;
+}
+#hero .col-2 .logo {
+  width: 35%;
+  margin-bottom: 40px;
+}
+#hero .col-2 h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 55px;
+}
+#hero .col-2 h1 span {
+  color: #5DC3FB;
+  display: block;
+}
+#hero .col-2 a {
+  text-decoration: none;
+  border-radius: 20px;
+  border: 2px solid #5DC3FB;
+  background: linear-gradient(180deg, #636363 0%, #333 46.88%);
+  color: white;
+  text-align: center;
+  width: 300px;
+  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+}
+#hero .col-2 a img {
+  transform: translateX(10px);
+}
+#hero .col-3 p {
+  color: white;
+  font-size: 1.5rem;
+  width: 50%;
+  text-align: center;
+}
+#hero .col-3 p span {
+  color: #5DC3FB;
+}
+
+#info-screen {
+  position: fixed;
+  z-index: 100;
+  height: 100vh;
+}
+#info-screen .info {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  color: white;
+}
+#info-screen .info span:not(.sep) {
+  font-weight: bold;
+  font-size: 1.25rem;
+}/*# sourceMappingURL=styles.css.map */
