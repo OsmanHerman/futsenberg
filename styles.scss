@@ -3,11 +3,25 @@
     src: url(./assets/AsapCondensed-Regular.ttf);
 }
 
+// p: 1.5
+// h3: 1.75
+// h2/h1: 3
+
+
+// Regularizar padding en todas las secciones
+// Regularizar tamaño de <p> en todas las vistas
+
+
+
 * {
     margin: 0;
     padding: 0;
     font-family: asap-regular, sans-serif;
     box-sizing: border-box;
+}
+
+body {
+    background-color: #151515;
 }
 
 #hero{
@@ -241,7 +255,7 @@
             height: 120px;
             color: #5DC3FB;
             background-color: white;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             padding: 20px 40px;
             border-radius: 15px;
             display: flex;
@@ -255,12 +269,11 @@
     .ventaja-mobile{display: none;}
 
     @media screen and (max-width: 1600px) {
-        padding: 5vh 5%;
+        padding: 5vh 6%;
 
     }
 
     @media screen and (max-width: 900px) {
-        padding: 5vh 0%;
         .ventaja-mobile {display: initial;}        
     }
 
@@ -309,7 +322,144 @@
 
 
 
+#como-comprar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vh 15%; //corregir
+    row-gap: 100px;
+    margin-top: 100px;
 
+    .img1{
+        position: absolute;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin-top: 200px;
+
+        img{
+            width: 450px;
+        }
+        
+    }
+
+    .img2{
+        position: absolute;
+        width: 100%;
+        height: 500px;
+        margin-top: 600px;
+
+        img{
+            width: 350px;
+        }
+    }
+
+    .img3{
+        position: absolute;
+        width: 100%;
+        height: 500px;
+        margin-top: 1000px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        img{
+            width: 450px;
+        }
+    }
+    
+    h2{
+        border-radius: 20px;
+        background: rgba(105, 105, 105, 0.50);
+        color: white;
+        padding: 25px 40px;
+        font-size: 2.5rem;
+
+        span{color: #5DC3FB;}
+    }
+
+    .pasos {
+        display: flex;
+        flex-direction: column;
+        row-gap: 100px;
+        position: relative;
+        
+        hr{
+            width: 50%;
+            align-self: center;
+            border: 1px solid #696969;;
+        }
+
+        .paso {
+            width: 50%;
+            
+            h3 {
+                color: #5DC3FB;
+                font-size: 1.75rem;
+                margin-bottom: 20px;
+            }
+            p {
+                color: white;
+                font-size: 1.5rem;
+            }
+            
+            &.par {
+                text-align: right;
+                align-self: end;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1600px) {
+        padding: 5vh 6%;
+        margin-top: 70px;
+
+        .img1{img{width: 350px;}}
+
+        .img2{img{width: 250px;}}
+
+        .img3{img{width: 350px;}}
+    }
+
+    @media (orientation: portrait){
+        padding: 5vh 5%;
+        row-gap: 70px;
+        margin-top: 20px;
+
+        .img1{margin-top: 100px;
+            img{width: 250px;}}
+
+        .img2{img{width: 200px;}}
+
+        .img3{margin-top: 900px;
+            img{width: 270px;}}
+        
+        h2{
+            padding: 25px 25px;
+            font-size: 2rem;
+            text-align: center;
+
+            span {
+                display: block;
+            }
+        }
+    
+        .pasos {
+            row-gap: 60px;
+            
+            hr{width: 70%;}
+    
+            .paso {
+                width: 90%;
+                
+                h3 {font-size: 1.75rem;}
+                p {font-size: 1.25rem;}
+            }
+        }
+    }
+}
 
 
 

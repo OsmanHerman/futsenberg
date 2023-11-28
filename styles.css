@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #151515;
+}
+
 #hero {
   width: 100%;
   height: 100vh;
@@ -205,7 +209,7 @@
   height: 120px;
   color: #5DC3FB;
   background-color: white;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   padding: 20px 40px;
   border-radius: 15px;
   display: flex;
@@ -219,13 +223,10 @@
 }
 @media screen and (max-width: 1600px) {
   #ventajas {
-    padding: 5vh 5%;
+    padding: 5vh 6%;
   }
 }
 @media screen and (max-width: 900px) {
-  #ventajas {
-    padding: 5vh 0%;
-  }
   #ventajas .ventaja-mobile {
     display: initial;
   }
@@ -266,6 +267,145 @@
     align-items: center;
     text-align: center;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+#como-comprar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 15%;
+  row-gap: 100px;
+  margin-top: 100px;
+}
+#como-comprar .img1 {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 200px;
+}
+#como-comprar .img1 img {
+  width: 450px;
+}
+#como-comprar .img2 {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  margin-top: 600px;
+}
+#como-comprar .img2 img {
+  width: 350px;
+}
+#como-comprar .img3 {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  margin-top: 1000px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+#como-comprar .img3 img {
+  width: 450px;
+}
+#como-comprar h2 {
+  border-radius: 20px;
+  background: rgba(105, 105, 105, 0.5);
+  color: white;
+  padding: 25px 40px;
+  font-size: 2.5rem;
+}
+#como-comprar h2 span {
+  color: #5DC3FB;
+}
+#como-comprar .pasos {
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
+  position: relative;
+}
+#como-comprar .pasos hr {
+  width: 50%;
+  align-self: center;
+  border: 1px solid #696969;
+}
+#como-comprar .pasos .paso {
+  width: 50%;
+}
+#como-comprar .pasos .paso h3 {
+  color: #5DC3FB;
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+}
+#como-comprar .pasos .paso p {
+  color: white;
+  font-size: 1.5rem;
+}
+#como-comprar .pasos .paso.par {
+  text-align: right;
+  align-self: end;
+}
+@media screen and (max-width: 1600px) {
+  #como-comprar {
+    padding: 5vh 6%;
+    margin-top: 70px;
+  }
+  #como-comprar .img1 img {
+    width: 350px;
+  }
+  #como-comprar .img2 img {
+    width: 250px;
+  }
+  #como-comprar .img3 img {
+    width: 350px;
+  }
+}
+@media (orientation: portrait) {
+  #como-comprar {
+    padding: 5vh 5%;
+    row-gap: 70px;
+    margin-top: 20px;
+  }
+  #como-comprar .img1 {
+    margin-top: 100px;
+  }
+  #como-comprar .img1 img {
+    width: 250px;
+  }
+  #como-comprar .img2 img {
+    width: 200px;
+  }
+  #como-comprar .img3 {
+    margin-top: 900px;
+  }
+  #como-comprar .img3 img {
+    width: 270px;
+  }
+  #como-comprar h2 {
+    padding: 25px 25px;
+    font-size: 2rem;
+    text-align: center;
+  }
+  #como-comprar h2 span {
+    display: block;
+  }
+  #como-comprar .pasos {
+    row-gap: 60px;
+  }
+  #como-comprar .pasos hr {
+    width: 70%;
+  }
+  #como-comprar .pasos .paso {
+    width: 90%;
+  }
+  #como-comprar .pasos .paso h3 {
+    font-size: 1.75rem;
+  }
+  #como-comprar .pasos .paso p {
+    font-size: 1.25rem;
   }
 }
 
