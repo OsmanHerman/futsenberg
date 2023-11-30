@@ -15,3 +15,37 @@ ventajasIconos.forEach((icono, index) => {
         ventajasMobile.textContent = ventajasTextos[index].textContent;
     })
 })
+
+// Header 
+const header = document.querySelector('header');
+const navDropdown = document.getElementById('nav-dropdown');
+const background = header.querySelector('.background');
+
+let headerOpen = false;
+
+console.log(background)
+
+function toggleHeader(boolean) {
+    if (boolean) { // open
+        header.classList.add('open');
+        headerOpen = true;
+        // console.log('open')
+    } else { // close
+        header.classList.remove('open');
+        headerOpen = false;
+        // console.log('close')
+    }   
+}
+
+navDropdown.addEventListener('click', () => {
+    if (headerOpen) toggleHeader(false);
+    else toggleHeader(true);
+})
+
+window.addEventListener('resize', () => {
+    if(window.innerWidth > 600) toggleHeader(0);
+})
+
+window.addEventListener('touchstart', (e) => {
+    if(!e.target.closest('header')) toggleHeader(0)
+})

@@ -2,6 +2,10 @@
   font-family: "asap-regular";
   src: url(./assets/AsapCondensed-Regular.ttf);
 }
+@font-face {
+  font-family: "audiowide";
+  src: url(./assets/Audiowide-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +14,16 @@
 }
 
 body {
-  background-color: #151515;
+  background-color: #181818;
+}
+
+header {
+  position: fixed;
+  padding: 0 15%;
+  height: 15vh;
+  width: 100%;
+  z-index: 3;
+  background-color: rgba(255, 0, 0, 0.241);
 }
 
 #hero {
@@ -235,7 +248,7 @@ body {
   #ventajas {
     -moz-column-gap: 0px;
          column-gap: 0px;
-    padding: 5vh 5%;
+    padding: 5vh 6%;
   }
   #ventajas .ventaja .icono {
     width: 80px;
@@ -365,7 +378,7 @@ body {
 }
 @media (orientation: portrait) {
   #como-comprar {
-    padding: 5vh 5%;
+    padding: 5vh 6%;
     row-gap: 70px;
     margin-top: 20px;
   }
@@ -406,6 +419,341 @@ body {
   }
   #como-comprar .pasos .paso p {
     font-size: 1.25rem;
+  }
+}
+
+#ofertas {
+  padding: 5vh 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 100px;
+}
+#ofertas h2 {
+  border-radius: 20px;
+  background: rgba(105, 105, 105, 0.5);
+  color: white;
+  padding: 25px 40px;
+  font-size: 2.5rem;
+}
+#ofertas .tarjetas {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+#ofertas .tarjetas .tarjeta {
+  padding: 20px 30px;
+  box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  flex-basis: 250px;
+  margin-bottom: 70px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #606060 0%, #181818 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+#ofertas .tarjetas .tarjeta img {
+  width: 140px;
+}
+#ofertas .tarjetas .tarjeta h3 {
+  font-weight: 600;
+  background: linear-gradient(180deg, #FFF5A5 0%, #D2B45E 0.01%, #FFF5A5 51.04%, #D2B45E 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+}
+#ofertas .tarjetas .tarjeta .cantidad {
+  font-weight: bolder;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+#ofertas .tarjetas .tarjeta .texto {
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+#ofertas .tarjetas .tarjeta .precio {
+  font-weight: bolder;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+#ofertas .tarjetas .tarjeta a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #D2B45E 0%, #FFF5A5 47.4%, #D2B45E 100%);
+  margin-bottom: 15px;
+  font-weight: 600;
+  transition: all 0.1s linear;
+}
+#ofertas .tarjetas .tarjeta a:hover {
+  box-shadow: 0 0 10px 0 #faeb76;
+}
+#ofertas .tarjetas .tarjeta:nth-child(2) {
+  background: linear-gradient(180deg, #5DC3FB 0%, #181818 100%);
+}
+#ofertas .tarjetas .tarjeta:nth-child(5) .cantidad {
+  font-size: 2rem;
+}
+@media screen and (max-width: 1600px) {
+  #ofertas {
+    padding: 5vh 6%;
+  }
+  #ofertas .tarjetas .tarjeta {
+    flex-basis: 220px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #ofertas .tarjetas .tarjeta {
+    flex-basis: 270px;
+  }
+}
+
+#consolas {
+  padding: 7vh 15%;
+  background-image: url(assets/consola-bg-desktop.png);
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  position: relative;
+}
+#consolas .mask {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(93, 195, 251, 0.9) 0%, rgba(50, 143, 194, 0.9) 100%);
+}
+#consolas .consola {
+  z-index: 2;
+  display: grid;
+  place-items: center;
+}
+#consolas .consola img {
+  width: 60px;
+}
+#consolas .consola p {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 70%;
+}
+@media screen and (max-width: 1600px) {
+  #consolas {
+    padding: 7vh 6%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #consolas {
+    background-image: url(assets/consola-bg-mobile.png);
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  #consolas .consola img {
+    width: 80px;
+  }
+}
+
+#contacto {
+  padding: 5vh 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 100px;
+  background-image: url(./assets/contacto-bg.png);
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+#contacto h2 {
+  border-radius: 20px;
+  background: rgba(105, 105, 105, 0.5);
+  color: white;
+  margin-top: 100px;
+  padding: 25px 40px;
+  font-size: 2.5rem;
+}
+#contacto .contenedor {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 100px;
+}
+#contacto .contenedor div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 30px;
+  row-gap: 30px;
+}
+#contacto .contenedor div h4 {
+  font-size: 1.25rem;
+}
+#contacto .contenedor div p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #696969;
+  margin: 0 30px;
+  text-align: center;
+}
+#contacto .contenedor div p img {
+  width: 40px;
+  margin: 0 30px 0 0px;
+}
+#contacto .contenedor div a {
+  width: 150px;
+  text-decoration: none;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #696969 0%, #121212 100%);
+  color: white;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px;
+  transition: all 0.2s linear;
+}
+#contacto .contenedor div a .contacto-wsp-hover, #contacto .contenedor div a .contacto-ig-hover {
+  position: absolute;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+#contacto .contenedor div a .contacto-wsp-hover {
+  background: linear-gradient(180deg, #53CF5F 0%, #27B43C 100%, #27B43C 100%);
+}
+#contacto .contenedor div a .contacto-ig-hover {
+  background: linear-gradient(180deg, #664BC9 0%, #C837AB 72.01%);
+}
+#contacto .contenedor div a:hover .contacto-wsp-hover {
+  opacity: 1;
+}
+#contacto .contenedor div a:hover .contacto-ig-hover {
+  opacity: 1;
+}
+#contacto .contenedor .insta {
+  border-right: 1px solid grey;
+}
+@media screen and (max-width: 1600px) {
+  #contacto {
+    padding: 5vh 6%;
+  }
+}
+@media (orientation: portrait) {
+  #contacto {
+    padding: 0 10%;
+  }
+  #contacto h2 {
+    width: 100%;
+  }
+  #contacto .contenedor {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  #contacto .contenedor div {
+    padding: 40px 0px;
+  }
+  #contacto .contenedor div h4 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  #contacto .contenedor div p {
+    flex-direction: column;
+    row-gap: 30px;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  #contacto .contenedor div p img {
+    margin: 0px;
+  }
+  #contacto .contenedor div a {
+    width: 50%;
+    padding: 10px 0px;
+  }
+  #contacto .contenedor .insta {
+    border-right: 0px solid grey;
+    border-bottom: 1px solid grey;
+  }
+}
+
+footer .cliente {
+  padding: 3vh 15%;
+  background: linear-gradient(180deg, #606060 0%, #181818 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+footer .cliente > img {
+  width: 120px;
+}
+footer .cliente p {
+  font-size: 1rem;
+  color: white;
+  justify-self: center;
+  text-align: center;
+}
+footer .cliente .redes {
+  justify-self: end;
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+footer .cliente .redes img {
+  width: 40px;
+}
+footer .decoded {
+  padding: 2vh 0;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+footer .decoded a {
+  color: white;
+  cursor: pointer;
+  font-family: "audiowide", sans-serif;
+  padding: 0 2px;
+  text-decoration: none;
+}
+@media screen and (max-width: 1600px) {
+  footer .cliente {
+    padding: 3vh 6%;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer .cliente {
+    grid-template-columns: 1fr;
+  }
+  footer .cliente > img, footer .cliente .redes {
+    justify-self: center;
+  }
+  footer .cliente > img, footer .cliente p {
+    margin-bottom: 30px;
   }
 }
 

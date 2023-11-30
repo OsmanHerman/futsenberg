@@ -1,0 +1,163 @@
+body {
+    // background-color: red;
+}
+
+@media screen and (min-width: 900px) { 
+
+    /*H E A D E R*/
+
+    .hamb{
+        display: none;
+    }
+    
+    .navBar{
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        column-gap: 10%;
+        transition: background-color 0.3s linear;
+    }
+
+    .navBar-background-scroll{
+        background-color: #006A7A;
+    }
+
+    .home-menu > a > img{
+        width: 80px;
+    }
+
+    .menu{
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu > a{
+        text-decoration: none;
+        font-family: 'Inter', sans-serif;
+        font-size: 1vw;
+        font-weight: 400;
+        color: white;
+    }
+
+    .menu > a:nth-child(5){
+        border-radius: 27px;
+        background: #FFF;
+        color: #30C5CA;
+        padding: 2% 5% 2% 5%;
+        transition: all 0.2s linear;
+    }
+
+    .menu > a:nth-child(5):hover{
+        background: rgb(190, 245, 253);
+        color: #006A7A;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    
+    /*H E A D E R*/
+
+    .navBar{
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: background-color 0.3s linear;
+    }
+
+    .navBar-background-scroll{
+        background-color: #006A7A;
+    }
+
+    .navBar-background{
+        background-color: rgba(0, 106, 122, 0.856);
+    }
+    
+    .home-menu{
+        width: 90%;
+        height: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .home-menu > a{
+        text-decoration: none;
+        font-family: 'Inter', sans-serif;
+        color: white;
+        font-size: 5vw;
+        font-weight: 400;
+        transition: opacity 0.3s linear;
+    }
+    
+    .hamb{
+        width: 12%; 
+        cursor: pointer; 
+    }
+    
+    .hamb hr {
+        height: 0.5vh;
+        border: solid 1px white;
+        border-radius: 50px;
+        margin: 4.5px;
+        background-color: white;
+        transition: all 0.2s linear;
+    }
+    
+    .oneClick{transform: rotate(-45deg) translate(-6px, 6px);}
+    .twoClick{opacity: 0;}
+    .trheeClick{transform: rotate(45deg) translate(-6px, -6px);}
+    
+    
+    .menu{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 5%;
+        overflow-y: hidden;
+        height: 0;
+        transition: height 0.3s linear;
+    }
+    
+    .menu > a{
+        width: 50%;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 400;
+        font-size: 5vw;
+        color: white;
+        opacity: 0;
+        transition: opacity 0.3s linear;
+    }
+
+    .menu > a:not(:nth-child(4), :nth-child(5)){
+        border-bottom: #FFF solid 1px;
+        padding-bottom: 10%;
+    }
+
+    .menu > a:nth-child(1){
+        margin-top: 20%;
+    }
+
+    .menu > a:nth-child(5){
+        width: 60%;
+        padding: 4% 0 4% 0;
+        color: #0896AC;
+        border-radius: 27px;
+        background: #FFF;
+        margin-top: 20%;
+    }
+    
+    .menuClick{height: 100vh;}
+    .menuClick > a{opacity: 1;}
+}
