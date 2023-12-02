@@ -17,6 +17,7 @@
     padding: 0;
     font-family: asap-regular, sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -34,6 +35,7 @@ body {
 .loader{
     width: 100%;
     position: absolute;
+    background-color: #181818;
     
     height: 100vh;
     display: flex;
@@ -325,6 +327,11 @@ header {
     }
 
     nav {
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
         display: flex;
         width: 40%;
         justify-content: space-between;
@@ -680,11 +687,11 @@ header {
         }
 
         p {
-            height: 120px;
+            height: 130px;
             color: #5DC3FB;
             background-color: white;
             font-size: 1.5rem;
-            padding: 20px 40px;
+            padding: 20px 30px;
             border-radius: 15px;
             display: flex;
             justify-content: center;
@@ -701,17 +708,29 @@ header {
 
     }
 
-    @media screen and (max-width: 900px) {
-        .ventaja-mobile {display: initial;}        
+    @media screen and (max-width: 1300px) {
+        .ventaja {
+            p {
+                padding: 5px 20px;
+            }
+        }
     }
 
+    @media screen and (max-width: 1150px) {
+        .ventaja {
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
 
-    @media (orientation: portrait) {
+    @media screen and (max-width: 900px) {
+        // .ventaja-mobile {display: initial;}  
+        
         column-gap: 0px;
         padding: 5vh 6%;
 
         .ventaja{
-    
             .icono{
                 width: 80px;
                 height: 80px;
@@ -1183,7 +1202,7 @@ header {
                     font-weight: 600;
                     font-size: 1.2rem;
 
-                    img{margin: 0px;}
+                    a{margin: 0px;}
                 }
     
                 a { 

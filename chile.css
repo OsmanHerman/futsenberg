@@ -1,42 +1,42 @@
 #hero .col-2 h1 span {
-  color: #F6D95D;
+  color: #CD2231;
   display: block;
 }
 #hero .col-2 .col-3-mobile p span {
-  color: #F6D95D;
+  color: #CD2231;
 }
 #hero .col-2 a {
-  border: 2px solid #F6D95D;
+  border: 2px solid #CD2231;
 }
 #hero .col-3 p span {
-  color: #F6D95D;
+  color: #CD2231;
 }
 
 #ventajas {
-  background: linear-gradient(180deg, #F6D95D 0%, #FFDC46 0.01%, #BD9E19 100%);
+  background: linear-gradient(180deg, #CD2231 0%, #FF3749 0.01%, #9D0E1A 100%);
 }
 #ventajas .ventaja p {
-  color: #F6D95D;
+  color: #CD2231;
 }
-@media (orientation: portrait) {
+@media screen and (max-width: 900px) {
   #ventajas .ventaja-mobile {
-    color: #F6D95D;
+    color: #CD2231;
   }
 }
 
 #como-comprar h2 span {
-  color: #F6D95D;
+  color: #CD2231;
 }
 #como-comprar .pasos .paso h3 {
-  color: #F6D95D;
+  color: #CD2231;
 }
 
 #ofertas .tarjetas .tarjeta:nth-child(2) {
-  background: linear-gradient(180deg, #F6D95D 0%, #181818 100%);
+  background: linear-gradient(180deg, #CD2231 0%, #181818 100%);
 }
 
 #consolas .mask {
-  background: linear-gradient(180deg, rgba(246, 217, 93, 0.9) 0%, rgba(189, 158, 25, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(205, 34, 49, 0.9) 0%, rgba(157, 14, 26, 0.9) 100%);
 }
 
 #info-screen {

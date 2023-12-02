@@ -1,0 +1,93 @@
+// C O M P O N E N T E S
+
+
+#hero{
+    .col-2 {
+        h1 {
+            span {
+                color: #F6D95D;
+                display: block;
+            }
+        }
+
+        .col-3-mobile {
+            p {
+                span {
+                    color: #F6D95D;
+                }
+            }  
+        }
+
+        a {border: 2px solid #F6D95D;}
+    }
+
+    .col-3 {
+        p {
+            span {
+                color: #F6D95D;
+            }
+        }  
+    }
+}
+
+#ventajas {
+    background: linear-gradient(180deg, #F6D95D 0%, #FFDC46 0.01%, #BD9E19 100%);
+
+    .ventaja{
+        p {color: #F6D95D;}
+    }
+
+    @media screen and (max-width: 900px) {
+        .ventaja-mobile{color: #F6D95D;}
+    }
+}
+
+
+#como-comprar {
+    h2{span{color: #F6D95D;}}
+    .pasos {
+        .paso {
+            h3 {color: #F6D95D;}
+        }
+    }
+
+}
+
+#ofertas{
+    .tarjetas {
+        .tarjeta {
+            &:nth-child(2){background: linear-gradient(180deg, #F6D95D 0%, #181818 100%);}
+        }
+
+    }
+}
+
+#consolas {
+    .mask {
+        background: linear-gradient(180deg, rgba(246, 217, 93, 0.90) 0%, rgba(189, 158, 25, 0.90) 100%);
+    }
+}
+
+
+// P A N T A L L A   D E   T A M A Ñ O S
+
+#info-screen { 
+    position: fixed;
+    z-index: 100;
+    height: 100vh;
+
+    .info {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: white;
+        background-color:#181818;
+        border-radius: 15px;
+        padding: 6px 15px;
+
+        span:not(.sep) {
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+    }
+}
