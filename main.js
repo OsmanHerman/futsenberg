@@ -42,13 +42,31 @@ toggleBtn.addEventListener('click', () => {
     document.getElementById('trhee').classList.toggle('trheeClick')
 })
 
-/*document.querySelector(".hamb").addEventListener('click', function(e) {
-    document.getElementById('one').classList.toggle('oneClick')
-    document.getElementById('two').classList.toggle('twoClick')
-    document.getElementById('trhee').classList.toggle('trheeClick')
-    document.querySelector('.menu').classList.toggle('menuClick')
-    document.querySelector('.navBar').classList.toggle('navBar-background')
-  })*/
+
+
+// C A R G A R   C O N T E N I D O 
+
+const precios = {
+    'argentina': [false, "6.500", "19.600", "32.600", "62.250"],
+    'venezuela': [true, "10", "27,8", "43,7", "82"],
+    'chile': [false, "7.800", "22.100", "34.900", "65.900"],
+    'uruguay': [false, "580", "1.650", "2.600", "4.920"],
+    'colombia': [false, "35.000", "99.700", "157.000", "297.500"],
+    // 'mexico': [false, 0, 0, 0, 0]
+}
+
+const todasTarjetas = Array.from(document.querySelectorAll('#ofertas .tarjeta')).slice(0, 4);
+
+function llenarTarjetas(pais) {
+    const esDolar = precios[pais][0];
+    todasTarjetas.forEach((element, index) => {
+        element.children[4].textContent = 
+            (!esDolar ? "$ " : "") +
+            precios[pais][index+1] +
+            (esDolar ? " USD" : "");
+    })
+}
+
 
 
 
