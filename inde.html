@@ -7,8 +7,8 @@
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <title>Document</title>
 </head>
-<body class="hidden" id="bodyAr">
-    <div class="loader" id="onload">
+<body class="hidden">
+    <div class="loader">
         <div class="wrapper">
             <div class="circle"></div>
             <div class="circle"></div>
@@ -50,6 +50,12 @@
         </div>
     </div>
 
-    <script src="./main.js"></script>
+    <script>
+        window.addEventListener("load", function () {           
+            const loader = document.querySelector('.loader');
+            loader.style.display = 'none';
+            document.body.classList.remove('hidden');
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,59 @@
+#hero .col-2 h1 span {
+  color: #F6D95D;
+  display: block;
+}
+#hero .col-2 .col-3-mobile p span {
+  color: #F6D95D;
+}
+#hero .col-2 a {
+  border: 2px solid #F6D95D;
+}
+#hero .col-3 p span {
+  color: #F6D95D;
+}
+
+#ventajas {
+  background: linear-gradient(180deg, #F6D95D 0%, #FFDC46 0.01%, #BD9E19 100%);
+}
+#ventajas .ventaja p {
+  color: #F6D95D;
+}
+@media (orientation: portrait) {
+  #ventajas .ventaja-mobile {
+    color: #F6D95D;
+  }
+}
+
+#como-comprar h2 span {
+  color: #F6D95D;
+}
+#como-comprar .pasos .paso h3 {
+  color: #F6D95D;
+}
+
+#ofertas .tarjetas .tarjeta:nth-child(2) {
+  background: linear-gradient(180deg, #F6D95D 0%, #181818 100%);
+}
+
+#consolas .mask {
+  background: linear-gradient(180deg, rgba(246, 217, 93, 0.9) 0%, rgba(189, 158, 25, 0.9) 100%);
+}
+
+#info-screen {
+  position: fixed;
+  z-index: 100;
+  height: 100vh;
+}
+#info-screen .info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: #181818;
+  border-radius: 15px;
+  padding: 6px 15px;
+}
+#info-screen .info span:not(.sep) {
+  font-weight: bold;
+  font-size: 1.25rem;
+}/*# sourceMappingURL=chile.css.map */
