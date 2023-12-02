@@ -7,30 +7,54 @@
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <title>Futsenberg</title>
 </head>
-<body>
+<body class="hidden" id="bodyAr">
     <div id="info-screen">
         <div class="info">
             <span class="width">WW</span><span class="sep">x</span><span class="height">HH</span>
         </div>
     </div>
 
-    <!--<header class="navBar">
-        <div class="home-menu">
-            <a href="#" id="logo-title"><img src="./assets/logo.png" alt=""></a>
-            <div class="hamb">
-                <hr id="one">
-                <hr id="two">
-                <hr id="trhee">
+    <div class="loader" id="onload">
+        <div class="wrapper">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="icons">
+            <a href=""><img src="https://res.cloudinary.com/dews3zbls/image/upload/v1682020469/logos/icon_cpp_axpuzb.png" alt=""></a>
+            <button class="dropdown">
+                <svg id="nav-dropdown" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g><path d="M36.57,73.14h182.86c20.21,0,36.57,16.36,36.57,36.57c0,20.18-16.36,36.57-36.57,36.57H36.57 C16.39,146.29,0,129.89,0,109.71C0,89.5,16.39,73.14,36.57,73.14z M292.57,365.71h182.86c20.21,0,36.57,16.36,36.57,36.57 c0,20.18-16.36,36.57-36.57,36.57H292.57c-20.18,0-36.57-16.39-36.57-36.57C256,382.07,272.39,365.71,292.57,365.71z M36.57,219.43 h438.86c20.21,0,36.57,16.36,36.57,36.57c0,20.18-16.36,36.57-36.57,36.57H36.57C16.39,292.57,0,276.18,0,256 C0,235.79,16.39,219.43,36.57,219.43z"/></g>
+                </svg>
+            </button>
+        </div>
+        <nav class="not-auto">
+            <a>Inicio</a>
+            <a>Cómo comprar</a>
+            <a>Productos</a>
+            <a>Contacto</a>
+        </nav>
+        <div class="socials-container">
+            <div class="socials">
+                <a target="_blank" href="https://www.instagram.com/futsenberg.ok/"><img src="./assets/panel-ig.svg" alt=""></a>
+                <a target="_blank" href="*"><img src="./assets/panel-fb.svg" alt=""></a>
+                <a target="_blank" href="https://wa.me/5491149747343?text=Estoy interesado por los Fut Coins..."><img src="./assets/panel-wsp.svg" alt=""></a>
             </div>
         </div>
-        <div class="menu">
-            <a href="" class="underline">Inicio</a>
-            <a href="" class="underline">Cómo Comprar</a>
-            <a href="" class="underline">Productos</a>
-            <a href="" class="underline">Contacto</a> 
-        </div>
-    </header>-->
+    </header>
 
+    <div class="redes">
+        <a target="_blank" href="https://www.instagram.com/futsenberg.ok/"><img src="./assets/panel-ig.svg" alt=""></a>
+        <a target="_blank" href="*"><img src="./assets/panel-fb.svg" alt=""></a>
+        <a target="_blank" href="https://wa.me/5491149747343?text=Estoy interesado por los Fut Coins..."><img src="./assets/panel-wsp.svg" alt=""></a>
+    </div>
+    
     <main>
         <section id="hero">
             <div class="col-1">
@@ -51,6 +75,7 @@
                 <p>Asesoramiento especializado y servicio de boosting con jugadores <span>PROFESIONALES</span>.</p>
             </div>
         </section>
+
         <section id="ventajas">
             <div class="ventaja">
                 <div class="icono"><img src="./assets/icono-1.svg" alt="icono de seguro"></div>
@@ -68,6 +93,7 @@
                 <p>Con un sistema ANTIBANEO, 100% SEGURO y SIN RIESGO en cada operación.</p>
             </div>
         </section>
+
         <section id="como-comprar">
             <div class="img1"><img id="comprar-img1" src="./assets/messi.png" alt="Messi"></div>
             <div class="img2"><img id="comprar-img2" src="./assets/mbappe.png" alt="Mbappe"></div>
@@ -96,6 +122,7 @@
                 <hr>
             </div>
         </section>
+
         <section id="ofertas">
             <h2>¡OFERTAS!</h2>
             <div class="tarjetas">
@@ -141,6 +168,7 @@
                 </div>
             </div>
         </section>
+
         <section id="consolas">
             <div class="mask"></div>
             <div class="consola">
@@ -156,12 +184,13 @@
                 <img src="./assets/consola-pantalla.svg" alt="">
             </div>
         </section>
+
         <section id="contacto">
             <h2>¡CONTÁCTANOS!</h2>
             <div class="contenedor">
                 <div class="insta">
                     <h4>¡Encontranos en Instagram!</h4>
-                    <p><img src="./assets/contacto-ig.svg" alt="">Seguinos y enterate de todas las novedades.</p>
+                    <p><a target="_blank" href="https://www.instagram.com/futsenberg.ok/"><img src="./assets/contacto-ig.svg" alt=""><img class="contactoImgHover" src="./assets/contacto-ig-hover.svg" alt=""></a>Seguinos y enterate de todas las novedades.</p>
                     <a target="_blank" href="https://www.instagram.com/futsenberg.ok/">
                         ¡Seguinos!
                         <div class="contacto-ig-hover">¡Seguinos!</div>
@@ -169,7 +198,7 @@
                 </div>
                 <div class="wsp">
                     <h4>¡Escribinos a nuestro WhatsApp!</h4>
-                    <p><img src="./assets/contacto-wsp.svg" alt="">¿Tenés alguna duda? ¡No dudes en escribirnos!</p>
+                    <p><a target="_blank" href="https://wa.me/5491149747343?text=Estoy interesado por los Fut Coins..."><img src="./assets/contacto-wsp.svg" alt=""><img class="contactoImgHover" src="./assets/contacto-wsp-hover.svg" alt=""></a>¿Tenés alguna duda? ¡No dudes en escribirnos!</p>
                     <a target="_blank" href="https://wa.me/5491149747343?text=Estoy interesado por los Fut Coins...">
                         ¡Consultanos!
                         <div class="contacto-wsp-hover">¡Consultanos!</div>
@@ -178,6 +207,7 @@
             </div>
         </section>
     </main>
+
     <footer>
         <div class="cliente">
             <img src="./assets/logo.png" alt="">
