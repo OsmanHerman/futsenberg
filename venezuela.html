@@ -6,15 +6,9 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./venezuela.css">
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
-    <title>Futsenberg</title>
+    <title>Futsenberg | Venezuela</title>
 </head>
 <body class="hidden" id="bodyAr">
-    <div id="info-screen">
-        <div class="info">
-            <span class="width">WW</span><span class="sep">x</span><span class="height">HH</span>
-        </div>
-    </div>
-
     <div class="loader" id="onload">
         <div class="wrapper">
             <div class="circle"></div>
@@ -44,16 +38,16 @@
         <div class="socials-container">
             <div class="socials">
                 <a target="_blank" href="https://www.instagram.com/futsenberg.ok/"><img src="./assets/panel-ig.svg" alt=""></a>
-                <a target="_blank" href="*"><img src="./assets/panel-fb.svg" alt=""></a>
+                <a target="_blank" href="https://www.tiktok.com/@futsenberg.ok"><img src="./assets/panel-tk.svg" alt=""></a>
                 <a target="_blank" href="https://wa.me/5491149747343?text=Estoy interesado por los Fut Coins..."><img src="./assets/panel-wsp.svg" alt=""></a>
             </div>
         </div>
     </header>
 
     <div class="redes">
-        <a target="_blank" href="https://www.instagram.com/futsenberg.ok/"><img src="./assets/panel-ig.svg" alt=""></a>
-        <a target="_blank" href="*"><img src="./assets/panel-fb.svg" alt=""></a>
-        <a target="_blank" href="https://wa.me/5491149747343?text=Estoy interesado por los Fut Coins..."><img src="./assets/panel-wsp.svg" alt=""></a>
+        <a target="_blank" href="https://www.instagram.com/futsenberg.ok/"><img src="./assets/panel-ig.svg" alt="logo instagram"></a>
+        <a target="_blank" href="https://www.tiktok.com/@futsenberg.ok"><img src="./assets/panel-tk.svg" alt="logo tiktok"></a>
+        <a target="_blank" href="https://wa.me/5491149747343?text=Estoy interesado por los Fut Coins..."><img src="./assets/panel-wsp.svg" alt="logo whatsapp"></a>
     </div>
     
     <main>
@@ -214,8 +208,8 @@
             <img src="./assets/logo.png" alt="">
             <p>Copyright © 2023 Futsenberg | Todos los derechos reservados</p>
             <div class="redes">
-                <a target="_blank" href="*"><img src="./assets/footer-fb.svg" alt="logo facebook"></a>
                 <a target="_blank" href="https://www.instagram.com/futsenberg.ok/"><img src="./assets/footer-ig.svg" alt="logo instagram"></a>
+                <a target="_blank" href="https://www.tiktok.com/@futsenberg.ok"><img src="./assets/footer-tk.svg" alt="logo tiktok"></a>
                 <a target="_blank" href="https://wa.me/5491149747343?text=¡Hola! Vengo del sitio web..."><img src="./assets/footer-wsp.svg" alt="logo whatsapp"></a>
             </div>
         </div>
@@ -223,22 +217,7 @@
             <p>Desarrollado por <a target="_blank" href="https://decoded.site/">DECODED</a></p>
         </div>
     </footer>
-
     
-
-    <script>
-        const width = document.querySelector('#info-screen .width');
-        const height = document.querySelector('#info-screen .height');
-        width.textContent = window.innerWidth;
-        height.textContent = window.innerHeight;
-
-        window.addEventListener('resize', ()=>{
-            // width.textContent = document.documentElement.clientWidth;
-            width.textContent = window.innerWidth;
-            // height.textContent = document.documentElement.clientHeight;
-            height.textContent = window.innerHeight;
-        })
-    </script>
     <script src="./main.js"></script>
     <script>
         llenarTarjetas("venezuela");

@@ -5,15 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
-    <title>Futsenberg</title>
+    <title>Futsenberg | Argentina</title>
 </head>
 <body class="hidden" id="bodyAr">
-    <div id="info-screen">
-        <div class="info">
-            <span class="width">WW</span><span class="sep">x</span><span class="height">HH</span>
-        </div>
-    </div>
-
     <div class="loader" id="onload">
         <div class="wrapper">
             <div class="circle"></div>
@@ -42,17 +36,17 @@
         </nav>
         <div class="socials-container">
             <div class="socials">
-                <a target="_blank" href="https://www.instagram.com/futsenberg.ok/"><img src="./assets/panel-ig.svg" alt=""></a>
-                <a target="_blank" href="*"><img src="./assets/panel-fb.svg" alt=""></a>
-                <a target="_blank" href="https://wa.me/5491149747343?text=Estoy interesado por los Fut Coins..."><img src="./assets/panel-wsp.svg" alt=""></a>
+                <a target="_blank" href="https://www.instagram.com/futsenberg.ok/"><img src="./assets/panel-ig.svg" alt="logo instagram"></a>
+                <a target="_blank" href="https://www.tiktok.com/@futsenberg.ok"><img src="./assets/panel-tk.svg" alt="logo tik tok"></a>
+                <a target="_blank" href="https://wa.me/5491149747343?text=Estoy interesado por los Fut Coins..."><img src="./assets/panel-wsp.svg" alt="logo whatsapp"></a>
             </div>
         </div>
     </header>
 
     <div class="redes">
-        <a target="_blank" href="https://www.instagram.com/futsenberg.ok/"><img src="./assets/panel-ig.svg" alt=""></a>
-        <a target="_blank" href="*"><img src="./assets/panel-fb.svg" alt=""></a>
-        <a target="_blank" href="https://wa.me/5491149747343?text=Estoy interesado por los Fut Coins..."><img src="./assets/panel-wsp.svg" alt=""></a>
+        <a target="_blank" href="https://www.instagram.com/futsenberg.ok/"><img src="./assets/panel-ig.svg" alt="logo instagram"></a>
+        <a target="_blank" href="https://www.tiktok.com/@futsenberg.ok"><img src="./assets/panel-tk.svg" alt="logo tik tok"></a>
+        <a target="_blank" href="https://wa.me/5491149747343?text=Estoy interesado por los Fut Coins..."><img src="./assets/panel-wsp.svg" alt="logo whatsapp"></a>
     </div>
     
     <main>
@@ -78,15 +72,15 @@
 
         <section id="ventajas">
             <div class="ventaja">
-                <div class="icono"><img src="./assets/icono-1.svg" alt="icono de seguro"></div>
+                <div class="icono"><img src="./assets/ar/icono-1.svg" alt="icono de seguro"></div>
                 <p>Con un sistema ANTIBANEO, 100% SEGURO y SIN RIESGO en cada operación.</p>
             </div>
             <div class="ventaja">
-                <div class="icono"><img src="./assets/icono-2.svg" alt="icono de joystick"></div>
+                <div class="icono"><img src="./assets/ar/icono-2.svg" alt="icono de joystick"></div>
                 <p>Asesoramiento especializado y servicio de boosting con JUGADORES PROFESIONALES.</p>
             </div>
             <div class="ventaja">
-                <div class="icono"><img src="./assets/icono-3.svg" alt="icono de dinero"></div>
+                <div class="icono"><img src="./assets/ar/icono-3.svg" alt="icono de dinero"></div>
                 <p>¡Nosotros te ofrecemos LOS MEJORES PRECIOS DEL MERCADO!</p>
             </div>
             <div class="ventaja-mobile">
@@ -95,7 +89,7 @@
         </section>
 
         <section id="como-comprar">
-            <div class="img1"><img id="comprar-img1" src="./assets/messi.png" alt="Messi"></div>
+            <div class="img1"><img id="comprar-img1" src="./assets/ar/messi.png" alt="Messi"></div>
             <div class="img2"><img id="comprar-img2" src="./assets/mbappe.png" alt="Mbappe"></div>
             <div class="img3"><img id="comprar-img3" src="./assets/rubio.png" alt="Halland"></div>
             <h2>¿CÓMO PUEDO <span>COMPRAR MONEDAS?</span></h2>
@@ -124,7 +118,7 @@
         </section>
 
         <section id="ofertas">
-            <h2>Productos</h2>
+            <h2>¡OFERTAS!</h2>
             <div class="tarjetas">
                 <div class="tarjeta">
                     <img src="./assets/coins.png" alt="">
@@ -213,8 +207,8 @@
             <img src="./assets/logo.png" alt="">
             <p>Copyright © 2023 Futsenberg | Todos los derechos reservados</p>
             <div class="redes">
-                <a target="_blank" href="*"><img src="./assets/footer-fb.svg" alt="logo facebook"></a>
                 <a target="_blank" href="https://www.instagram.com/futsenberg.ok/"><img src="./assets/footer-ig.svg" alt="logo instagram"></a>
+                <a target="_blank" href="https://www.tiktok.com/@futsenberg.ok"><img src="./assets/footer-tk.svg" alt="logo tik tok"></a>
                 <a target="_blank" href="https://wa.me/5491149747343?text=¡Hola! Vengo del sitio web..."><img src="./assets/footer-wsp.svg" alt="logo whatsapp"></a>
             </div>
         </div>
@@ -223,21 +217,6 @@
         </div>
     </footer>
 
-    
-
-    <script>
-        const width = document.querySelector('#info-screen .width');
-        const height = document.querySelector('#info-screen .height');
-        width.textContent = window.innerWidth;
-        height.textContent = window.innerHeight;
-
-        window.addEventListener('resize', ()=>{
-            // width.textContent = document.documentElement.clientWidth;
-            width.textContent = window.innerWidth;
-            // height.textContent = document.documentElement.clientHeight;
-            height.textContent = window.innerHeight;
-        })
-    </script>
     <script src="./main.js"></script>
     <script>
         llenarTarjetas("argentina");

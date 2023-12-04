@@ -124,7 +124,7 @@ body {
   padding: 0px 15%;
   row-gap: 60px;
   color: white;
-  background: url(./assets/selector-fondo.png);
+  background: url(./assets/selector-fondo.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -272,7 +272,7 @@ body > .redes a:hover img {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   z-index: 3;
   padding: 0 15%;
   display: flex;
@@ -281,12 +281,14 @@ header {
   width: 100%;
   font-size: 1.2rem;
   color: white;
+  min-height: 70px;
   height: 10vh;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0);
   transition: all 200ms ease-out;
 }
 header.not-hero {
+  position: fixed;
   background-color: rgba(24, 24, 24, 0.7);
   border-bottom: 2px solid white;
   -webkit-backdrop-filter: blur(10px);
@@ -297,6 +299,7 @@ header .icons {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
+  min-height: 70px;
 }
 header .icons a img {
   width: 70px;
@@ -321,18 +324,32 @@ header .socials-container {
   header {
     padding: 0 6%;
   }
+  header nav {
+    width: 53%;
+  }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (orientation: portrait) {
   header {
     padding: 0 5%;
     display: initial;
+    /*nav.auto {
+        width: initial;
+        flex-direction: column;
+        align-items: end;
+        padding: 35px 0;
+        height: calc($final-height - $base-height);
+    }*/
   }
   header.open {
-    height: 50vh;
+    height: 55vh;
     background-color: rgba(0, 0, 0, 0.7);
     border-bottom: 3px solid white;
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
+    min-height: 350px;
+  }
+  header.open nav.not-auto {
+    min-height: 150px;
   }
   header.open nav.not-auto a {
     transform: translateY(0);
@@ -356,13 +373,13 @@ header .socials-container {
     transition: all 300ms ease-out 300ms;
   }
   header .icons a img {
-    width: 60px;
+    width: 65px;
   }
   header .icons button {
     display: flex;
     flex-direction: column;
     row-gap: 5px;
-    width: 50px;
+    width: 40px;
     background-color: rgba(0, 0, 0, 0);
     border: 0;
   }
@@ -381,13 +398,6 @@ header .socials-container {
   }
   header .icons button .trheeClick {
     transform: rotate(45deg) translate(-7px, -7px);
-  }
-  header nav.auto {
-    width: initial;
-    flex-direction: column;
-    align-items: end;
-    padding: 35px 0;
-    height: 40vh;
   }
   header nav.not-auto {
     width: initial;
@@ -430,17 +440,33 @@ header .socials-container {
     filter: invert(0.2);
   }
 }
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  header nav {
+    width: 70%;
+  }
+}
 
 #hero {
   width: 100%;
   height: 100vh;
   min-height: 700px;
-  background: url(./assets/hero-fondo.png);
+  background: url(./assets/hero-fondo.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
   padding: 0px 15%;
+  /* @media (orientation: portrait) {
+      grid-template-columns: 1fr;
+      .col-1, .col-3 {
+          display: none;
+      }
+      .col-2 {
+          .col-3-mobile {
+              display: flex;
+          }
+      }
+  } */
 }
 #hero > * {
   display: flex;
@@ -566,7 +592,10 @@ header .socials-container {
     padding: 0 3%;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (orientation: portrait) {
+  #hero {
+    grid-template-columns: 1fr;
+  }
   #hero > * {
     margin-top: 7vh;
   }
@@ -584,16 +613,31 @@ header .socials-container {
     font-size: 1rem;
     margin-bottom: 20px;
   }
-}
-@media (orientation: portrait) {
-  #hero {
-    grid-template-columns: 1fr;
-  }
   #hero .col-1, #hero .col-3 {
     display: none;
   }
   #hero .col-2 .col-3-mobile {
     display: flex;
+  }
+}
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  #hero {
+    min-height: 550px;
+  }
+  #hero .col-2 h1 {
+    font-size: 1.8rem;
+  }
+  #hero .col-3 p {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  #hero .col-2 h1 {
+    font-size: 1.8rem;
+  }
+  #hero .col-2 a {
+    font-size: 1rem;
+    width: 230px;
   }
 }
 
@@ -932,7 +976,7 @@ header .socials-container {
 
 #consolas {
   padding: 7vh 15%;
-  background-image: url(assets/consola-bg-desktop.png);
+  background-image: url(assets/consola-bg-desktop.jpg);
   background-size: cover;
   display: flex;
   justify-content: space-between;
@@ -972,7 +1016,7 @@ header .socials-container {
 }
 @media screen and (max-width: 900px) {
   #consolas {
-    background-image: url(assets/consola-bg-mobile.png);
+    background-image: url(assets/consola-bg-mobile.jpg);
     flex-direction: column;
     row-gap: 50px;
   }
@@ -987,7 +1031,7 @@ header .socials-container {
   flex-direction: column;
   align-items: center;
   row-gap: 100px;
-  background-image: url(./assets/contacto-bg.png);
+  background-image: url(./assets/contacto-bg.jpg);
   background-repeat: no-repeat;
   background-position: 100%;
 }
@@ -1106,12 +1150,15 @@ header .socials-container {
   }
   #contacto .contenedor div p {
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 15px;
     font-weight: 600;
     font-size: 1.2rem;
   }
   #contacto .contenedor div p a {
     margin: 0px;
+  }
+  #contacto .contenedor div p a img {
+    width: 45px;
   }
   #contacto .contenedor div a {
     width: 50%;
@@ -1147,6 +1194,7 @@ footer .cliente .redes {
 }
 footer .cliente .redes img {
   width: 40px;
+  transition: all 0.2s linear;
 }
 footer .decoded {
   padding: 2vh 0;
@@ -1195,4 +1243,4 @@ footer .decoded a {
 #info-screen .info span:not(.sep) {
   font-weight: bold;
   font-size: 1.25rem;
-}/*# sourceMappingURL=styles.css.map */
+}

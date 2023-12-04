@@ -1,5 +1,11 @@
 'use strict';
 
+// V A R I A B L E S   G E N E R A L E S
+
+const hero = document.getElementById('hero');
+
+
+
 // P R E L O A D E R
 
 window.addEventListener("load", function () {
@@ -12,7 +18,7 @@ window.addEventListener("load", function () {
 
 
 
-// SECCION: VENTAJAS
+// S E C C I O N :   V E N T A J A S
 
 const ventajasMobile = document.querySelector("#ventajas .ventaja-mobile p");
 const ventajasIconos = document.querySelectorAll("#ventajas .icono");
@@ -35,12 +41,49 @@ ventajasIconos.forEach((icono, index) => {
 const header = document.querySelector('header');
 const toggleBtn = document.querySelector('header .icons button');
 
+let headerAbsolute = true;
+let headerOpen = false;
+
+function toggleHeader(boolean) {
+    if (boolean) { // open
+        header.classList.add('open');
+        headerOpen = true;
+    } else { // close
+        header.classList.remove('open');
+        headerOpen = false;
+    }   
+}
+
+/* window.addEventListener('resize', () => {
+    if(window.innerWidth > 600) toggleHeader(0);
+})
+
+window.addEventListener('touchstart', (e) => {
+    if(!e.target.closest('header')) toggleHeader(0)
+}) */
+
 toggleBtn.addEventListener('click', () => {
     header.classList.toggle('open');
     document.getElementById('one').classList.toggle('oneClick')
     document.getElementById('two').classList.toggle('twoClick')
     document.getElementById('trhee').classList.toggle('trheeClick')
 })
+
+const heroObserver = new IntersectionObserver(
+    entries => {
+        const [entry] = entries;
+        if(entry.isIntersecting) {
+            header.classList.remove('not-hero');
+        } else {
+            header.classList.add('not-hero');
+        }
+    },
+    {
+        rootMargin: `-${header.getBoundingClientRect().height}px` 
+    }
+)
+
+heroObserver.observe(hero);
 
 
 
