@@ -175,7 +175,7 @@ body {
                 cursor: pointer;
                 img{
                     width: 100%;
-                    &:hover{box-shadow: 0 0 10px 0 rgb(101, 250, 255);}
+                    &:hover{box-shadow: 0 0 10px 0 rgb(215, 254, 255);}
                 }
             }
   
@@ -219,6 +219,9 @@ body {
             .pais{
                 row-gap: 5px;
                 h3{font-size: 1.25rem;}
+
+                a{img{&:hover{box-shadow: initial;}}
+                }
             }
         }
     }
@@ -370,6 +373,14 @@ header {
             backdrop-filter: blur(10px);
             min-height: $open-min-height;
 
+            button {
+                hr {
+                    &:nth-child(1) {transform: rotate(-45deg) translate(-7px, 7px);}
+                    &:nth-child(2) {opacity: 0;}
+                    &:nth-child(3) {transform: rotate(45deg) translate(-7px, -7px);}
+                }
+            }
+
             nav.not-auto {
                 min-height: $nav-min-height;
                 a {
@@ -414,9 +425,9 @@ header {
                     transition: all 0.2s linear;
                 }
 
-                .oneClick{transform: rotate(-45deg) translate(-7px, 7px);}
+                /* .oneClick{transform: rotate(-45deg) translate(-7px, 7px);}
                 .twoClick{opacity: 0;}
-                .trheeClick{transform: rotate(45deg) translate(-7px, -7px);}
+                .trheeClick{transform: rotate(45deg) translate(-7px, -7px);} */
             }
         }
 
@@ -852,7 +863,7 @@ header {
         position: absolute;
         width: 100%;
         height: 500px;
-        margin-top: 1000px;
+        margin-top: 1200px;
         display: flex;
         justify-content: end;
         align-items: center;
@@ -895,6 +906,10 @@ header {
             p {
                 color: white;
                 font-size: 1.5rem;
+                strong {
+                    color: #5DC3FB;
+                    //text-decoration: underline;
+                }
             }
             
             &.par {
@@ -925,7 +940,7 @@ header {
 
         .img2{img{width: 200px;}}
 
-        .img3{margin-top: 900px;
+        .img3{margin-top: 1080px;
             img{width: 270px;}}
         
         h2{
@@ -1230,8 +1245,6 @@ header {
 
     @media (orientation: portrait) {
         padding: 0 10%;
-        
-        h2{width: 100%;}
 
         .contenedor{
             display: flex;
@@ -1336,31 +1349,6 @@ footer {
             &>img, p {
                 margin-bottom: 30px;
             }
-        }
-    }
-}
-
-
-
-// P A N T A L L A   D E   T A M A Ñ O S
-
-#info-screen { 
-    position: fixed;
-    z-index: 100;
-    height: 100vh;
-
-    .info {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        color: white;
-        background-color:#181818;
-        border-radius: 15px;
-        padding: 6px 15px;
-
-        span:not(.sep) {
-            font-weight: bold;
-            font-size: 1.25rem;
         }
     }
 }

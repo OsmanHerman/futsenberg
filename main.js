@@ -40,6 +40,7 @@ ventajasIconos.forEach((icono, index) => {
 
 const header = document.querySelector('header');
 const toggleBtn = document.querySelector('header .icons button');
+const links = header.querySelectorAll("nav a");
 
 let headerAbsolute = true;
 let headerOpen = false;
@@ -54,20 +55,13 @@ function toggleHeader(boolean) {
     }   
 }
 
-/* window.addEventListener('resize', () => {
-    if(window.innerWidth > 600) toggleHeader(0);
-})
+window.addEventListener('resize', () => {if (window.innerWidth > 600) toggleHeader(0);})
 
-window.addEventListener('touchstart', (e) => {
-    if(!e.target.closest('header')) toggleHeader(0)
-}) */
+window.addEventListener('touchstart', (e) => {if (!e.target.closest('header')) toggleHeader(0)})
 
-toggleBtn.addEventListener('click', () => {
-    header.classList.toggle('open');
-    document.getElementById('one').classList.toggle('oneClick')
-    document.getElementById('two').classList.toggle('twoClick')
-    document.getElementById('trhee').classList.toggle('trheeClick')
-})
+toggleBtn.addEventListener('click', () => {header.classList.toggle('open');})
+
+links.forEach(link => link.addEventListener('click', () => {toggleHeader(0)}))
 
 const heroObserver = new IntersectionObserver(
     entries => {
@@ -90,105 +84,20 @@ heroObserver.observe(hero);
 // C A R G A R   C O N T E N I D O 
 
 const precios = {
-    'argentina': [false, "6.500", "19.600", "32.600", "62.250"],
-    'venezuela': [true, "10", "27,8", "43,7", "82"],
-    'chile': [false, "7.800", "22.100", "34.900", "65.900"],
-    'uruguay': [false, "580", "1.650", "2.600", "4.920"],
-    'colombia': [false, "35.000", "99.700", "157.000", "297.500"],
-    // 'mexico': [false, 0, 0, 0, 0]
+    'argentina': ["ARS", "6.500", "19.600", "32.600", "62.250"],
+    'venezuela': ["USD", "10", "27,8", "43,7", "82"],
+    'chile': ["CLP", "7.800", "22.100", "34.900", "65.900"],
+    'uruguay': ["UYU", "580", "1.650", "2.600", "4.920"],
+    'colombia': ["COP", "35.000", "99.700", "157.000", "297.500"],
+    'mexico': ["MXN", "210", "599", "945", "1.785"]
 }
 
 const todasTarjetas = Array.from(document.querySelectorAll('#ofertas .tarjeta')).slice(0, 4);
 
 function llenarTarjetas(pais) {
-    const esDolar = precios[pais][0];
+    const currencyCode = precios[pais][0];
     todasTarjetas.forEach((element, index) => {
-        element.children[4].textContent = 
-            (!esDolar ? "$ " : "") +
-            precios[pais][index+1] +
-            (esDolar ? " USD" : "");
+        const currentPrice = precios[pais][index+1];
+        element.children[4].textContent = `${currentPrice} ${currencyCode}`;
     })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Panel de redes
-/* document.addEventListener("DOMContentLoaded", function() {
-    var anchoRedes = document.querySelector(".redes").offsetWidth;
-    var altoRedes = (document.querySelector(".redes").offsetHeight)/2;
-    var anchoScroll = (document.body.scrollWidth - window.innerWidth)*(-1);
-    document.querySelector(".redes").style.transform = `translate(calc(100vw - ${anchoRedes + anchoScroll}px), calc(50vh - ${altoRedes}px)`;
-})
-
-window.addEventListener('resize', () => {
-    var anchoRedes = document.querySelector(".redes").offsetWidth;
-    var altoRedes = (document.querySelector(".redes").offsetHeight)/2;
-    var anchoScroll = (document.body.scrollWidth - window.innerWidth)*(-1);
-    document.querySelector(".redes").style.transform = `translate(calc(100vw - ${anchoRedes + anchoScroll}px), calc(50vh - ${altoRedes}px)`;
-})
- */
-
-
-/*window.addEventListener("load", function () {
-    var onloadSelectorHTML = document.getElementById('onload');
-    var bodySelectorHTML = document.getElementById('bodyAr');
-      
-    onloadSelectorHTML.style.display = 'none';
-    bodySelectorHTML.classList.remove('hidden');
-});*/
-
-/*window.onload = function() {
-    var onloadHTML = document.getElementById('onload');
-    var bodyHTML = document.getElementById('bodyAr');
-      
-    onloadHTML.style.display = 'none';
-    bodyHTML.classList.remove('hidden');
-};*/
-
-/*window.onload = function() {
-    var onloadHTML = document.getElementById('onloadSelector');
-    var bodyHTML = document.getElementById('bodySelector');
-      
-    onloadHTML.style.display = 'none';
-    bodyHTML.classList.remove('hiddenSelector');
-}*/

@@ -30,6 +30,9 @@
 #como-comprar .pasos .paso h3 {
   color: #CD2231;
 }
+#como-comprar .pasos .paso p strong {
+  color: #CD2231;
+}
 
 #ofertas .tarjetas .tarjeta:nth-child(2) {
   background: linear-gradient(180deg, #CD2231 0%, #181818 100%);
@@ -38,22 +41,3 @@
 #consolas .mask {
   background: linear-gradient(180deg, rgba(205, 34, 49, 0.9) 0%, rgba(157, 14, 26, 0.9) 100%);
 }
-
-#info-screen {
-  position: fixed;
-  z-index: 100;
-  height: 100vh;
-}
-#info-screen .info {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: white;
-  background-color: #181818;
-  border-radius: 15px;
-  padding: 6px 15px;
-}
-#info-screen .info span:not(.sep) {
-  font-weight: bold;
-  font-size: 1.25rem;
-}/*# sourceMappingURL=chile.css.map */

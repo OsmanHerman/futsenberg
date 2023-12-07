@@ -47,6 +47,7 @@
     .pasos {
         .paso {
             h3 {color: #0B7D57;}
+            p {strong {color: #0B7D57}}
         }
     }
 
@@ -64,29 +65,5 @@
 #consolas {
     .mask {
         background: linear-gradient(180deg, rgba(11, 125, 87, 0.90) 0%, rgba(0, 72, 48, 0.90) 100%);
-    }
-}
-
-
-// P A N T A L L A   D E   T A M A Ñ O S
-
-#info-screen { 
-    position: fixed;
-    z-index: 100;
-    height: 100vh;
-
-    .info {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        color: white;
-        background-color:#181818;
-        border-radius: 15px;
-        padding: 6px 15px;
-
-        span:not(.sep) {
-            font-weight: bold;
-            font-size: 1.25rem;
-        }
     }
 }
