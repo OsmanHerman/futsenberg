@@ -790,6 +790,7 @@ header .socials-container {
   color: white;
   padding: 25px 40px;
   font-size: 2.5rem;
+  text-align: center;
 }
 #como-comprar h2 span {
   color: #5DC3FB;
@@ -898,6 +899,7 @@ header .socials-container {
   color: white;
   padding: 25px 40px;
   font-size: 2.5rem;
+  text-align: center;
 }
 #ofertas .tarjetas {
   width: 100%;
@@ -1051,6 +1053,7 @@ header .socials-container {
   margin-top: 100px;
   padding: 25px 40px;
   font-size: 2.5rem;
+  text-align: center;
 }
 #contacto .contenedor {
   border-radius: 20px;
@@ -1069,6 +1072,7 @@ header .socials-container {
 }
 #contacto .contenedor div h4 {
   font-size: 1.25rem;
+  text-align: center;
 }
 #contacto .contenedor div p {
   display: flex;
